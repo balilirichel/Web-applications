@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/webApp.ico">
+    <link rel="stylesheet" href="batteryBar.css">
+    <title>Battery Percentage</title>
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a class="nav-link" href="main.html"><i class="fa fa-home"></i> Home</a> 
+        <a class="nav-link" href="alarm.html"><i class="fa fa-clock-o"></i> Alarm</a>
+        <a class="nav-link" href="weatherApp.html"><i class="fa fa-cloud"></i> Weather</a>
+        <a class="nav-link" href="todoApp.html"><i class="fa fa-pencil"></i> To do</a>
+      <!--  <a class="nav-link" href="internetSpeed.html"><i class="fa fa-wifi"></i> Internet Speed</a>-->
+        <a class="nav-link" href="numconvert.html"><i class="fa fa-sort-numeric-asc"></i> Number Converter</a>
+
+    </div>
+
+    <header>
+        <img src="images/battery.png" alt="">
+        <h1><span>Ba</span>ttery</h1>
+    </header> 
+
+    <section class="battery">
+        <div class="Bcard">
+            <div class="Bpill">
+                <div class="Blevel">
+                    <div class="Bliquid"></div>
+                </div>
+            </div>
+            <div class="Bdata">
+                <p class="Btext">Battery :</p>
+                <h1 class="Bpercentage">20%</h1>
+                <p class="Bstatus">
+                    <i class="ri-plug-line"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="batteryBar.js"></script>
+    <script>
+        function toggleNav() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

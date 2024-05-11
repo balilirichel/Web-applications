@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="description" content="A Collection of all the commonly used Unit Converters.">
+	<link rel="stylesheet" href="unitConvert.css" />
+	<link rel="icon" type="image/x-icon" href="/images/webApp.ico">
+	<link rel="manifest" href="images/site.webmanifest">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>Unit Converter</title>
+</head>
+<body onload="openTab(event,'unit-length'),selectedUpdate(0)">
+	<div class="container">
+
+		<div class="icon-bar">
+			<a class="nav-link" href="main.html"><i class="fa fa-home"></i> Home</a> 
+			<a class="nav-link" href="alarm.html"><i class="fa fa-clock-o"></i> Alarm</a>
+			<a class="nav-link" href="weatherApp.html"><i class="fa fa-cloud"></i> Weather</a>
+			<a class="nav-link" href="todoApp.html"><i class="fa fa-pencil"></i> To do</a>
+			<a class="nav-link" href="batteryBar.html"><i class="fa fa-battery"></i> Battery</a>
+		  <!--  <a class="nav-link" href="internetSpeed.html"><i class="fa fa-wifi"></i> Internet Speed</a>-->
+			<a class="nav-link" href="numconvert.html"><i class="fa fa-sort-exchange-asc"></i> Number Converter</a>
+		</div>
+		<br>
+		<header>
+			<img src="images/favicon-32x32.png" alt="">
+			<h1><span>Un</span>it Converter</h1>
+		</header>
+
+		<div class="outer-container">
+			<div class="converter">
+				<div class="input-container">
+					<div class="unit-type">
+						<div class="custom-select">
+							<select onclick="openTab(event)">
+								<option class="tablinks"  value="Length">Length</option>
+								<option class="tablinks"  value="Mass">Mass</option>
+								<option class="tablinks"  value="Volume">Volume</option>
+								<option class="tablinks"  value="Temperature">Temperature</option>
+								<option class="tablinks"  value="Time">Time</option>
+							</select>
+						</div>
+					</div>
+					<!-- Length -->
+					<div class="input-unit unit-length tabcontent" id="unit-length">
+						<div class="input-value">
+							<input type="text" class="Input-value" name="Input-Value" maxlength="10" autofocus onKeyUp="CalculateUnit()">
+						</div>
+						<div class="input-unit-type">
+							<select class="Unit-1" name="Unit-1" onchange="selectedUpdate(0),CalculateUnit()">
+								<option value="Meter">Meter (m)</option>
+								<option value="Kilometer">Kilometer (km)</option>
+								<option value="Centimeter">Centimeter (cm)</option>
+								<option value="Millimeter">Millimeter (mm)</option>
+								<option value="Micrometer">Micrometer (μm)</option>
+								<option value="Nanometer">Nanometer (nm)</option>
+								<option value="Decimeter">Decimeter (dm)</option>
+								<option value="Mile">Mile (mi)</option>
+								<option value="inch">inch (in)</option>
+								<option value="Yard">Yard (yd)</option>
+								<option value="Foot">Foot (ft)</option>
+							</select>
+						</div>
+					</div>
+					<!-- mass -->
+					<div class="input-unit unit-mass tabcontent" id="unit-mass">
+						<div class="input-value">
+							<input type="text" class="Input-value" name="Input-Value" maxlength="10" autofocus onKeyUp="CalculateUnit()">
+						</div>
+						<div class="input-unit-type">
+							<select class="Unit-1" name="Unit-1" onchange="selectedUpdate(0),CalculateUnit()">
+								<option value="Kilogram">Kilogram (kg)</option>
+								<option value="Gram">Gram (g)</option>
+								<option value="Milligram">Milligram (mg)</option>
+								<option value="Ton">Ton (t)</option>
+								<option value="Pound">Pound (lbs))</option>
+								<option value="Ounce">Ounce (oz)</option>
+							</select>
+						</div>
+					</div>
+			<!-- volume -->
+			<div class="input-unit unit-volume tabcontent" id="unit-volume">
+				<div class="input-value">
+					<input type="text" class="Input-value" name="Input-Value" maxlength="10" autofocus onKeyUp="CalculateUnit()">
+				</div>
+				<div class="input-unit-type">
+					<select class="Unit-1" name="Unit-1" onchange="selectedUpdate(0),CalculateUnit()">
+						<option value="Liter">Liter (l))</option>
+						<option value="Milli Liter">Milli Liter (mL)</option>
+						<option value="Gallon">Gallon (gal)</option>
+						<option value="Cubic Meter">Cubic Meter (mᶟ)</option>
+						<option value="Cubic Kilometer">Cubic Kilometer (kmᶟ)</option>
+						<option value="Cubic Centimeter">Cubic Centimeter (cmᶟ)</option>
+						<option value="Cubic Millimeter">Cubic Millimeter (mmᶟ)</option>
+					</select>
+				</div>
+			</div>
+			<!-- temperature -->
+			<div class="input-unit unit-temperature tabcontent" id="unit-temperature">
+				<div class="input-value">
+					<input type="text" class="Input-value" name="Input-Value" maxlength="10" autofocus onKeyUp="CalculateUnit()">
+				</div>
+				<div class="input-unit-type">
+					<select class="Unit-1" name="Unit-1" onchange="selectedUpdate(0),CalculateUnit()">
+						<option value="Kelvin">Kelvin (K)</option>
+						<option value="Celsius">Celsius (°C)</option>
+						<option value="Fahrenheit">Fahrenheit (°F)</option>
+					</select>
+				</div>
+			</div>
+			<!-- time -->
+			<div class="input-unit unit-time tabcontent" id="unit-time">
+				<div class="input-value">
+					<input type="text" class="Input-value" name="Input-Value" maxlength="10" autofocus onKeyUp="CalculateUnit()">
+				</div>
+				<div class="input-unit-type">
+					<select class="Unit-1" name="Unit-1" onchange="selectedUpdate(0),CalculateUnit()">
+						<option value="Second">Second (s)</option>
+						<option value="Millisecond">Millisecond (ms)</option>
+						<option value="Minute">Minute (min)</option>
+						<option value="Hour">Hour (h)</option>
+						<option value="Day">Day (d)</option>
+						<option value="week">Week</option>
+						<option value="Month">Month</option>
+						<option value="Year">Year</option>
+					
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="output-container">
+			<div class="down-arrow">
+				<img src="https://img.icons8.com/ios-filled/50/4ba0f3/long-arrow-down.png" />
+			</div>
+
+			<!-- length -->
+			<div class="output-unit unit-length tabcontent" id="unit-length">
+				<div class="output-value">
+					<input type="text" class="Output-value" name="Output-Value" maxlength="15" readonly>
+				</div>
+				<div class="output-unit-type">
+					<select class="Unit-2" name="Unit-2" onchange="selectedUpdate(1),CalculateUnit()">
+						<option value="Meter">Meter (m)</option>
+						<option value="Kilometer">Kilometer (km)</option>
+						<option value="Centimeter">Centimeter (cm)</option>
+						<option value="Millimeter">Millimeter (mm)</option>
+						<option value="Micrometer">Micrometer (μm)</option>
+						<option value="Nanometer">Nanometer (nm)</option>
+						<option value="Decimeter">Decimeter (dm)</option>
+						<option value="Mile">Mile (mi)</option>
+						<option value="inch">inch (in)</option>
+						<option value="Yard">Yard (yd)</option>
+						<option value="Foot">Foot (ft)</option>
+					</select>
+				</div>
+			</div>
+			<!-- mass -->
+			<div class="output-unit unit-mass tabcontent" id="unit-mass">
+				<div class="output-value">
+					<input type="text" class="Output-value" name="Output-Value" maxlength="15" readonly>
+				</div>
+				<div class="output-unit-type">
+					<select class="Unit-2" name="Unit-2" onchange="selectedUpdate(1),CalculateUnit()">
+						<option value="Kilogram">Kilogram (kg)</option>
+						<option value="Gram">Gram (g)</option>
+						<option value="Milligram">Milligram (mg)</option>
+						<option value="Ton">Ton (t)</option>
+						<option value="Pound">Pound (lbs))</option>
+						<option value="Ounce">Ounce (oz)</option>
+					</select>
+				</div>
+			</div>
+			<!-- volume -->
+			<div class="output-unit unit-volume tabcontent" id="unit-volume">
+				<div class="output-value">
+					<input type="text" class="Output-value" name="Output-Value" maxlength="15" readonly>
+				</div>
+				<div class="output-unit-type">
+					<select class="Unit-2" name="Unit-2" onchange="selectedUpdate(1),CalculateUnit()">
+						
+						<option value="Liter">Liter (l)</option>
+						<option value="Milli Liter">Milli Liter (mL)</option>
+						<option value="Gallon">Gallon (gal)</option>
+						<option value="Cubic Meter">Cubic Meter (mᶟ)</option>
+						<option value="Cubic Kilometer">Cubic Kilometer (kmᶟ)</option>
+						<option value="Cubic Centimeter">Cubic Centimeter (cmᶟ)</option>
+						<option value="Cubic Millimeter">Cubic Millimeter (mmᶟ)</option>
+			
+					</select>
+				</div>
+			</div>
+			<!-- temperature -->
+			<div class="output-unit unit-temperature tabcontent" id="unit-temperature">
+				<div class="output-value">
+					<input type="text" class="Output-value" name="Output-Value" maxlength="15" readonly>
+				</div>
+				<div class="output-unit-type">
+					<select class="Unit-2" name="Unit-2" onchange="selectedUpdate(1),CalculateUnit()">
+						<option value="Kelvin">Kelvin (K)</option>
+						<option value="Celsius">Celsius (°C)</option>
+						<option value="Fahrenheit">Fahrenheit (°F)</option>
+					</select>
+				</div>
+			</div>
+			<!-- time -->
+			<div class="output-unit unit-time tabcontent" id="unit-time">
+				<div class="output-value">
+					<input type="text" class="Output-value" name="Output-Value" maxlength="20" readonly>
+				</div>
+				<div class="output-unit-type">
+					<select class="Unit-2" name="Unit-2" onchange="selectedUpdate(1),CalculateUnit()">
+						<option value="Second">Second (s)</option>
+						<option value="Millisecond">Millisecond (ms)</option>
+						<option value="Minute">Minute (min)</option>
+						<option value="Hour">Hour (h)</option>
+						<option value="Day">Day (d)</option>
+						<option value="week">Week</option>
+						<option value="Month">Month</option>
+						<option value="Year">Year</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="unitConvert.js"></script>
+</body>
+
+</html>

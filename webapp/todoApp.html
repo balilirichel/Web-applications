@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" type="image/x-icon" href="/images/webApp.ico">
+    <link rel="stylesheet" href="todoApp.css">
+    <title>ListToDo App</title>
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a class="nav-link" href="main.html"><i class="fa fa-home"></i> Home</a> 
+        <a class="nav-link" href="alarm.html"><i class="fa fa-clock-o"></i> Alarm</a>
+        <a class="nav-link" href="weatherApp.html"><i class="fa fa-cloud"></i> Weather</a>
+        <a class="nav-link" href="batteryBar.html"><i class="fa fa-battery"></i> Battery</a>
+      <!--  <a class="nav-link" href="internetSpeed.html"><i class="fa fa-wifi"></i> Internet Speed</a>-->
+        <a class="nav-link" href="numconvert.html"><i class="fa fa-sort-numeric-asc"></i> Number Converter</a>
+       
+    </div>
+    <br>
+    <header>
+        <img src="images/toDO.png" alt="">
+        <h1><span>T</span>o do Lists</h1>
+    </header>
+
+    <div class="wrapper">
+        <div class="task-input">
+            <img src="bars-icon.svg">
+            <input type="text" placeholder="Add a new task">
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">
+                    All
+                </span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <ul class="task-box"></ul>
+
+    </div>
+
+    <script src="todoApp.js"></script>
+</body>
+
+</html>

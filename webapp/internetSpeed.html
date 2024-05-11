@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="internetSpeed.css">
+   
+    <title>Internet Speed</title>
+</head>
+
+<body>
+
+    <button id="toggleButton" onclick="toggleNav()">&#9776;Menu</button>
+
+    <nav id="navbar" class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="main.html"><i class="fa fa-home"></i> </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="budgetApp.html"> <i class="fa fa-book"></i> Budget </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="weatherApp.html"><i class="fa fa-cloud"></i> Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="todoApp.html">
+                        <i class="fa fa-pencil"></i> To do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="internetSpeed.html"><i class="fa fa-wifi"></i> Internet Speed </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="batteryBar.html"><i class="fa fa-battery"></i> Battery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="images/speedometer.png">
+        <p id="info"><span>...</span></p>
+        <p id="mbs"><span>Speed In Mbs: </span></p>
+        <p id="kbs"><span>Speed In Kbs: </span></p>
+        <p id="bits"><span>Speed In Bits: </span></p>
+    </div>
+
+    <script src="internetSpeed.js"></script>
+    <script>
+        function toggleNav() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

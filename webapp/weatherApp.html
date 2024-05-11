@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="weatherApp.css">
+    <link rel="icon" type="image/x-icon" href="/images/webApp.ico">
+    <title>Weather App</title>
+
+    
+<body>
+    <div class="icon-bar">
+        <a class="nav-link" href="main.html"><i class="fa fa-home"></i> Home</a> 
+        <a class="nav-link" href="alarm.html"><i class="fa fa-clock-o"></i> Alarm</a>
+        <a class="nav-link" href="todoApp.html"><i class="fa fa-pencil"></i> To do</a>
+        <a class="nav-link" href="batteryBar.html"><i class="fa fa-battery"></i> Battery</a>
+      <!--  <a class="nav-link" href="internetSpeed.html"><i class="fa fa-wifi"></i> Internet Speed</a>-->
+        <a class="nav-link" href="numconvert.html"><i class="fa fa-sort-numeric-asc"></i> Number Converter</a>
+
+    </div>
+    <br>
+    <header>
+        <img src="images/weatherApp.png" alt="">
+        <h1><span>We</span>ather App</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="images/404.png">
+            <p>Oops! Invalid location :/</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="weatherApp.js"></script>
+</body>
+
+</html>
